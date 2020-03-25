@@ -11,9 +11,7 @@ if (path.name && path.city){
 } else {
     response.end('Please provide name AND city parameters');
 }
-
-
-   
+    
 });
 
 server.listen(8000, '127.0.0.1', () =>{
