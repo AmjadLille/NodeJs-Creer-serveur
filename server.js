@@ -1,5 +1,6 @@
 const http = require('http');
 const url = require('url');
+const port = 8000;
 
 
 const server = http.createServer((request, response)=>{
@@ -14,6 +15,10 @@ if (path.name && path.city){
     
 });
 
-server.listen(8000, '127.0.0.1', () =>{
-    console.log('listening for requests now');
+server.listen(port, err => {
+  if (err) {
+    console.error("Something bad happened");
+  } else {
+    console.log(`server is listening on ${port}`);
+  }
 });
